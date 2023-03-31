@@ -14,12 +14,25 @@ class ViewController: UIViewController {
     @IBOutlet weak var falseBtn: UIButton!
     @IBOutlet weak var progressBar: UIProgressView!
     
+    let quiz = [
+        "Six + five is equal to eleven.",
+        "The earth is the fourth planet from the sun.",
+        "Jupiter is composed mostly of iron.",
+        "A lunar eclipse occurs when the sun passes"
+    ]
+    
+    var questionLcation = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        updateQ()
+        
     }
     @IBAction func answerBtnPressed(_ sender: UIButton) {
+        questionLcation += 1
+        updateQ()
     }
-    
+    func updateQ(){
+        questionLabel.text = quiz[questionLcation]
+    }
 }
-

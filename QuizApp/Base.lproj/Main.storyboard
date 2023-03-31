@@ -19,52 +19,45 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background-Bubbles" translatesAutoresizingMaskIntoConstraints="NO" id="f20-Sn-QF9">
                                 <rect key="frame" x="0.0" y="745" width="393" height="102"/>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ACJ-zp-VZf">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ACJ-zp-VZf">
                                 <rect key="frame" x="9" y="305" width="375" height="242"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalCompressionResistancePriority="1000" text="Question Text" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nq2-po-63c">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="42"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="42.666666666666664"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qQW-Yv-N3o">
-                                        <rect key="frame" x="0.0" y="52" width="375" height="80"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="80" id="rSp-zW-90s"/>
-                                        </constraints>
+                                        <rect key="frame" x="0.0" y="52.666666666666686" width="375" height="81"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <inset key="titleEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <state key="normal" title="True" backgroundImage="Rectangle">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="titleColor" systemColor="tintColor"/>
                                         </state>
                                         <connections>
-                                            <action selector="answerBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EF3-g8-H0F"/>
+                                            <action selector="answerBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9XW-x2-URg"/>
                                             <action selector="pressTrueBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3jq-oX-vAe"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h8R-Dh-K0N">
-                                        <rect key="frame" x="0.0" y="142" width="375" height="80"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="80" id="696-1o-VEx"/>
-                                        </constraints>
+                                        <rect key="frame" x="0.0" y="143.66666666666669" width="375" height="80.666666666666686"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <inset key="titleEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <state key="normal" title="False" backgroundImage="Rectangle">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="titleColor" systemColor="tintColor"/>
                                         </state>
                                         <connections>
-                                            <action selector="answerBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Khp-qw-9Gs"/>
+                                            <action selector="answerBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wrd-Us-fkk"/>
                                             <action selector="pressFalseBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VmN-dp-fbm"/>
                                         </connections>
                                     </button>
                                     <progressView opaque="NO" contentMode="scaleToFill" progressViewStyle="bar" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="TgY-Y9-Pbz">
-                                        <rect key="frame" x="0.0" y="232" width="375" height="11"/>
+                                        <rect key="frame" x="0.0" y="234.33333333333337" width="375" height="8.6666666666666572"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="tintColor" red="0.2770131528" green="0.3800790906" blue="0.57570761439999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="10" id="8vp-gB-rNj"/>
-                                        </constraints>
                                         <color key="progressTintColor" red="1" green="0.45854175089999999" blue="0.6605013609" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="trackTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </progressView>
@@ -101,6 +94,9 @@
         <image name="Rectangle" width="322" height="68"/>
         <systemColor name="systemIndigoColor">
             <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
