@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var trueBtn: UIButton!
     @IBOutlet weak var falseBtn: UIButton!
     @IBOutlet weak var progressBar: UIProgressView!
+
     
     let quiz = [
         Question(q: "Google was originally called 'Backrub'.", a: "True"),
@@ -22,31 +23,47 @@ class ViewController: UIViewController {
         Question(q: "No piece of square dry paper can be folded in half more than 7 times.", a: "False"),
     ]
     
-    var questionLcation = 0
+    var questionNumber = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         updateQ()
-        
     }
     @IBAction func answerBtnPressed(_ sender: UIButton) {
         
         let userAnswer = sender.currentTitle // True or False
-        let actualQuestion = quiz[questionLcation]
-        let actualAnswer = quiz[questionLcation].answer
+        let actualQuestion = quiz[questionNumber]
+        let actualAnswer = quiz[questionNumber].answer
         
-        if(questionLcation + 1 < quiz.count){
-            questionLcation += 1
+        //compare question answer between user answer and set background when true or false
+        if(userAnswer == actualAnswer){
+            sender.backgroundColor = UIColor.green
+        }else{
+            sender.backgroundColor = UIColor.red
+        }
+        
+        //increase question number until max.
+        if(questionNumber + 1 < quiz.count){
+            questionNumber += 1
             
         }else{
             resetQ()
         }
-        updateQ()
+        Timer.scheduledTimer(timeInterval: 0.3, target: self, selector: #selector(updateQ), userInfo: nil, repeats: false)
+   
     }
-    func updateQ(){
-        questionLabel.text = quiz[questionLcation].text
+    
+    //update background color, question , progressbar
+    @objc func updateQ(){
+        questionLabel.text = quiz[questionNumber].text
+        trueBtn.backgroundColor = UIColor.clear //clear initiated color from btn
+        falseBtn.backgroundColor = UIColor.clear
+        progressBar.progress = Float(questionNumber + 1) / Float(quiz.count)
+        
     }
+    
+    //reset question number to begin point.
     func resetQ(){
-        questionLcation = 0
+        questionNumber = 0
     }
 }
