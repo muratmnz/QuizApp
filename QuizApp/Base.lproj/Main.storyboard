@@ -38,7 +38,6 @@
                                         </state>
                                         <connections>
                                             <action selector="answerBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9XW-x2-URg"/>
-                                            <action selector="pressTrueBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3jq-oX-vAe"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h8R-Dh-K0N">
@@ -51,7 +50,6 @@
                                         </state>
                                         <connections>
                                             <action selector="answerBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wrd-Us-fkk"/>
-                                            <action selector="pressFalseBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VmN-dp-fbm"/>
                                         </connections>
                                     </button>
                                     <progressView opaque="NO" contentMode="scaleToFill" progressViewStyle="bar" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="TgY-Y9-Pbz">

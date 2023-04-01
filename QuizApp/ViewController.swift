@@ -15,10 +15,11 @@ class ViewController: UIViewController {
     @IBOutlet weak var progressBar: UIProgressView!
     
     let quiz = [
-        "Six + five is equal to eleven.",
-        "The earth is the fourth planet from the sun.",
-        "Jupiter is composed mostly of iron.",
-        "A lunar eclipse occurs when the sun passes"
+        Question(q: "Google was originally called 'Backrub'.", a: "True"),
+        Question(q: "Buzz Aldrin's mother's maiden name was 'Moon'.", a: "True"),
+        Question(q: "It is illegal to pee in the Ocean in Portugal.", a: "True"),
+        Question(q: "You can lead a cow down stairs but not up stairs.", a: "False"),
+        Question(q: "No piece of square dry paper can be folded in half more than 7 times.", a: "False"),
     ]
     
     var questionLcation = 0
@@ -29,10 +30,23 @@ class ViewController: UIViewController {
         
     }
     @IBAction func answerBtnPressed(_ sender: UIButton) {
-        questionLcation += 1
+        
+        let userAnswer = sender.currentTitle // True or False
+        let actualQuestion = quiz[questionLcation]
+        let actualAnswer = quiz[questionLcation].answer
+        
+        if(questionLcation + 1 < quiz.count){
+            questionLcation += 1
+            
+        }else{
+            resetQ()
+        }
         updateQ()
     }
     func updateQ(){
-        questionLabel.text = quiz[questionLcation]
+        questionLabel.text = quiz[questionLcation].text
+    }
+    func resetQ(){
+        questionLcation = 0
     }
 }
