@@ -14,6 +14,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var falseBtn: UIButton!
     @IBOutlet weak var progressBar: UIProgressView!
 
+    @IBOutlet weak var scoreUser: UILabel!
+    
     var quizBrain = QuizBrain()
     var questionNumber = 0
     
@@ -46,7 +48,7 @@ class ViewController: UIViewController {
         trueBtn.backgroundColor = UIColor.clear //clear initiated color from btn
         falseBtn.backgroundColor = UIColor.clear
         progressBar.progress = quizBrain.getProgress()
-        
+        scoreUser.text = "Score: \(quizBrain.getScore())"
     }
     
     //reset question number to begin point.

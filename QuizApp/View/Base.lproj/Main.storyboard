@@ -59,6 +59,13 @@
                                     </progressView>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="alY-Ne-4ju">
+                                <rect key="frame" x="29" y="72" width="90" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemIndigoColor"/>
@@ -77,6 +84,7 @@
                         <outlet property="falseBtn" destination="h8R-Dh-K0N" id="k8g-Zx-cfB"/>
                         <outlet property="progressBar" destination="TgY-Y9-Pbz" id="muf-Kx-lYr"/>
                         <outlet property="questionLabel" destination="Nq2-po-63c" id="16Q-1w-VIB"/>
+                        <outlet property="scoreUser" destination="alY-Ne-4ju" id="362-im-4Zs"/>
                         <outlet property="trueBtn" destination="qQW-Yv-N3o" id="g9L-Qf-z4Z"/>
                     </connections>
                 </viewController>
